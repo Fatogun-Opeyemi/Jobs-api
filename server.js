@@ -6,6 +6,7 @@ import cors from 'cors'
 import connectDB from './config/database.js';
 
 const app = express()
+app.use(cors())
 const PORT = process.env.PORT || 8082
 
 connectDB()
@@ -17,7 +18,6 @@ app.use(express.urlencoded({extended : false}))
 // routes 
 app.use('/api/jobs' , router)
 
-app.use(cors())
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
