@@ -11,7 +11,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "node --watch --env-file=.env server.js"
+    "dev": "node --watch --env-file=.env server.js",
+      "build": "echo 'Building Express.js app' && mkdir -p dist && cp server.js dist/server.js"
   },
   "keywords": [],
   "author": "",
